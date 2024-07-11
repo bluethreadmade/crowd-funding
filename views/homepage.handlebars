@@ -1,2 +1,8 @@
-<!-- Display each blog !-->
-<h1>Homepage</h1>
+<!-- Display each post !-->
+<section style="width: 100%">
+    <ul id="post-preview-list">
+        {{#each posts as |post|}}
+            {{> post-item}}
+        {{/each}}
+    </ul>
+</section>

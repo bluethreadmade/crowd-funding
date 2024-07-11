@@ -62,4 +62,21 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// If a GET request is made to /api/profile, that project data is retreived. 
+router.get('/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id);
+
+    if (!projectData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(projectData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
+

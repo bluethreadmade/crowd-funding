@@ -1,0 +1,51 @@
+:root {
+    --primary: #d9ead3;
+    --secondary: #231010;
+    --tertiary: #a7a7a7;
+}
+
+*,
+*::before,
+*::after {
+  color: var(--secondary);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--primary);
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-inline: 4em;
+  margin-top: 2em;
+}
+
+ul {
+  list-style: none;
+}

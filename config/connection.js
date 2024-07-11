@@ -9,7 +9,7 @@ if (process.env.DB_URL) {
   sequelize = new Sequelize(process.env.DB_URL, {
     hooks: { //workaround to prefix database table names in render 
       beforeDefine: function (columns, model) {
-        model.tableName = `{process.env.DB_NAME}_${model.name.singular}`;
+        model.tableName = `${process.env.DB_NAME}_${model.name.singular}`;
       },
     },
   });

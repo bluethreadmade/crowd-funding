@@ -51,11 +51,16 @@ ul {
   list-style: none;
 }
 
+h1 {
+  color: var(--secondary);
+}
+
 #post-preview-list {
   /* background: red; */
   display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
 }
 
 .funding-post {
@@ -80,7 +85,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
-  width: max-content;
+  width: auto;
   flex-grow: 1;
 }
 
@@ -88,11 +93,22 @@ ul {
   color: var(--secondary);
   font-size: 1.5em;
 }
+
+.funding-post > div:first-of-type > h5 {
+  font-size: 1em;
+}
+
+.funding-post > div:first-of-type > h5 > span {
+  color: forestgreen;
+  font-weight: bold;
+}
+
 .funding-post > div:first-of-type > h3,
 .funding-post > div:first-of-type > h5 {
   padding-left: 10px;
 }
 
+.funding-post > div:first-of-type > h5,
 .funding-post > div:first-of-type > h4 {
   font-weight: normal;
 }
@@ -101,5 +117,5 @@ ul {
 .funding-post > div:nth-of-type(2) {
   display: flex;
   align-items: center;
-  flex-shrink: 1;
+  width: 50%;
 }
